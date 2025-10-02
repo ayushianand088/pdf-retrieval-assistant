@@ -59,10 +59,9 @@ async def process_file(id: str, file_path: str):
         ]
     )
     
-    await files_collection.update_one({"_id": ObjectId}, {
+    await files_collection.update_one({"_id": ObjectId(id)}, {
         "$set": {
             "status": "processed",
+            "result": response.choices[0].message.content
         }
     })
-    
-    print(response.choices[0].message.content)
