@@ -4,6 +4,8 @@ ENV PYTHONUNBUFFERED=1
 
 RUN sudo apt-get update && sudo apt-get install -y curl
 
+RUN apt-get install -y poppler-utils
+
 # Copy requirements first
 COPY ../requirements.txt /tmp/requirements.txt
 RUN pip install --upgrade pip && pip install --no-cache-dir -r /tmp/requirements.txt
