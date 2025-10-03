@@ -7,9 +7,9 @@ from bson import ObjectId
 
 app = FastAPI()
 
-# @app.get("/")
-# def hello():
-#     return {"status": "healthy"}
+@app.get("/health")
+def health():
+    return {"status": "healthy"}
 
 @app.get("/{id}")
 async def get_file_by_id(id: str = Path(..., description="ID of the file")):
