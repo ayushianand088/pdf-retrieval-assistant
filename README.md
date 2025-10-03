@@ -51,6 +51,13 @@ pip install -r requirements.txt
 ```bash
 uvicorn app.main:app --reload
 ```
+### 4. Pull and run Docker image
+You can also run the app directly using Docker:
+```bash
+docker pull ayushianand/pdf-retrieval-assistant-app
+docker run -p 8000:8000 ayushianand/pdf-retrieval-assistant-app
+```
+[![Docker Image](https://img.shields.io/badge/Docker-Pull-blue?logo=docker)](https://hub.docker.com/r/ayushianand/pdf-retrieval-assistant-app)
 ---
 
 ## Screenshots
